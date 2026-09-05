@@ -1,0 +1,326 @@
+:root {
+  --primaria: #2c3a5a;
+  --destaque: #10b981;
+  --fundo: #090d16;
+  --cartao: #111a2d;
+  --texto: #f1f5f9;
+  --erro: #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout Split (Login e Cadastro) */
+.layout-auth {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lado-imagem {
+  flex: 1.1;
+  position: relative;
+  overflow: hidden;
+  background: #04070d;
+  height: 100%;
+}
+
+.lado-imagem::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(9, 13, 22, 0.1) 0%,
+    rgba(9, 13, 22, 0.5) 85%,
+    var(--fundo) 100%
+  );
+  pointer-events: none;
+}
+
+.img-cad-log {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.lado-formulario {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 64px;
+  background: var(--fundo);
+  height: 100%;
+  overflow: hidden;
+  max-width: 560px;
+}
+
+
+.voltar-inicio {
+  display: inline-block;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.voltar-inicio:hover {
+  color: var(--destaque);
+}
+
+.area-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.link-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-imagem {
+  height: 54px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.link-logo:hover .logo-imagem {
+  opacity: 0.85;
+}
+
+.cabecalho-auth {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.titulo-auth {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.subtitulo-auth {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+
+.mensagem-alerta {
+  display: none;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid var(--destaque);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--destaque);
+  text-align: center;
+  font-weight: 500;
+}
+
+.mensagem-alerta.erro {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: var(--erro);
+  color: #fca5a5;
+}
+
+/* Formulário */
+.formulario-login,
+.formulario-cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grupo-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rotulo-campo {
+  font-size: 13px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.campo-email,
+.campo-senha,
+.campo-nome,
+.campo-empresa,
+.campo-confirmar-senha {
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+}
+
+.campo-email:focus,
+.campo-senha:focus,
+.campo-nome:focus,
+.campo-empresa:focus,
+.campo-confirmar-senha:focus {
+  border-color: var(--destaque);
+}
+
+/* Seção de Botões */
+.botao-entrar,
+.botao-cadastrar {
+  width: 100%;
+  padding: 11px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--destaque);
+  color: #050811;
+  font-family: 'Inter', sans-serif;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.botao-entrar:hover,
+.botao-cadastrar:hover {
+  filter: brightness(1.15);
+}
+
+.botao-entrar:disabled,
+.botao-cadastrar:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.rodape-auth {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.rodape-auth a {
+  color: var(--destaque);
+  font-weight: 600;
+}
+
+.rodape-auth a:hover {
+  filter: brightness(1.15);
+  text-decoration: underline;
+}
+
+/* Página de Manutenção */
+.pagina-manutencao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+}
+
+.cartao-manutencao {
+  background: var(--cartao);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 44px 32px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.titulo-manutencao {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--destaque);
+  margin-bottom: 12px;
+}
+
+.subtitulo-manutencao {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.espaco-imagem-ilustracao {
+  display: block;
+  width: 100%;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 24px;
+}
+
+.botao-voltar-login {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--destaque);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--destaque);
+  background: rgba(16, 185, 129, 0.08);
+  cursor: pointer;
+}
+
+.botao-voltar-login:hover {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .layout-auth {
+    flex-direction: column;
+    height: auto;
+    overflow: auto;
+  }
+
+  .lado-imagem {
+    display: none;
+  }
+
+  .lado-formulario {
+    height: auto;
+    overflow: visible;
+    padding: 40px 28px;
+    max-width: 100%;
+  }
+}
