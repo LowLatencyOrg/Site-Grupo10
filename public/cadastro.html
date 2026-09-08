@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Criar Conta — lowlatency</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="icon" href="assets/icon/favicon2.ico" />
   <link rel="stylesheet" href="css/auth.css" />
 </head>
+
 <body>
 
   <div class="layout-auth">
@@ -33,27 +37,32 @@
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Nome completo *</label>
-          <input class="campo-nome" id="nome_input" type="text" value="Diretor de Infraestrutura" placeholder="Ex: Roberto Silva" required />
+          <input class="campo-nome" id="nome_input" type="text" value="Diretor de Infraestrutura"
+            placeholder="Ex: Roberto Silva" required />
         </div>
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Email corporativo *</label>
-          <input class="campo-email" id="email_input" type="email" value="admin@lowlatency.com.br" placeholder="roberto@empresa.com.br" required />
+          <input class="campo-email" id="email_input" type="email" value="admin@lowlatency.com.br"
+            placeholder="roberto@empresa.com.br" required />
         </div>
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Empresa / Instituição *</label>
-          <input class="campo-empresa" id="empresa_input" type="text" value="Instituição Financeira S/A" placeholder="Ex: Banco Alpha S/A" required />
+          <input class="campo-empresa" id="empresa_input" type="text" value="Instituição Financeira S/A"
+            placeholder="Ex: Banco Alpha S/A" required />
         </div>
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Senha de acesso *</label>
-          <input class="campo-senha" id="senha_input" type="password" value="123456" placeholder="Mínimo 6 caracteres" required />
+          <input class="campo-senha" id="senha_input" type="password" value="123456" placeholder="Mínimo 6 caracteres"
+            required />
         </div>
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Confirmar senha *</label>
-          <input class="campo-confirmar-senha" id="confirmacao_senha_input" type="password" value="123456" placeholder="Repita a senha" required />
+          <input class="campo-confirmar-senha" id="confirmacao_senha_input" type="password" value="123456"
+            placeholder="Repita a senha" required />
         </div>
 
         <button type="button" class="botao-cadastrar" onclick="cadastrar()">Concluir Cadastro</button>
@@ -99,6 +108,7 @@
         cardErro.className = "mensagem-alerta";
         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando...";
         setTimeout(sumirMensagem, 5000);
+        setTimeout(trocaTela, 2500)
       } else {
         cardErro.style.display = "block";
         cardErro.className = "mensagem-alerta erro";
@@ -109,10 +119,14 @@
       return false;
     }
 
+    function trocaTela(){
+      window.location = "/public/manutencao.html"
+    }
     function sumirMensagem() {
       cardErro.style.display = "none";
     }
   </script>
 
 </body>
+
 </html>
