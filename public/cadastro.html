@@ -53,6 +53,7 @@
             placeholder="Ex: Banco Alpha S/A" required />
         </div>
 
+
         <div class="grupo-campo">
           <label class="rotulo-campo">Senha de acesso *</label>
           <input class="campo-senha" id="senha_input" type="password" value="123456" placeholder="Mínimo 6 caracteres"
@@ -87,7 +88,7 @@
       var senhaVar = senha_input.value;
       var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-      if (nomeVar == "" || emailVar == "" || empresaVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+      if (nomeVar == "" || emailVar == "" || empresaVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || dataNascimento == "") {
         cardErro.style.display = "block";
         cardErro.className = "mensagem-alerta erro";
         mensagem_erro.innerHTML = "Preencha todos os campos em branco para prosseguir!";
@@ -120,7 +121,7 @@
     }
 
     function trocaTela(){
-      window.location = "/public/manutencao.html"
+      window.location = "file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/Site-Grupo10/public/manutencao.html"
     }
     function sumirMensagem() {
       cardErro.style.display = "none";
