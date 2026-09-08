@@ -1,6 +1,6 @@
 :root {
   --primaria: #2c3a5a;
-  --destaque: #10b981;
+  --destaque: #68dda8;
   --fundo: #090d16;
   --cartao: #111a2d;
   --texto: #f1f5f9;
@@ -101,6 +101,7 @@ img {
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease;
+  background-color: transparent;
 }
 
 .navbar.scrolled {

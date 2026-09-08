@@ -176,7 +176,7 @@ a {
 .campo-senha,
 .campo-nome,
 .campo-empresa,
-.campo-confirmar-senha {
+.campo-confirmar-senha, .data-nasc {
   width: 100%;
   padding: 11px 13px;
   border-radius: 8px;
@@ -186,6 +186,10 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   outline: none;
+}
+
+.data-nasc::-webkit-calendar-picker-indicator {
+  filter: invert(1);
 }
 
 .campo-email:focus,
@@ -298,29 +302,4 @@ a {
 
 .botao-voltar-login:hover {
   background: rgba(16, 185, 129, 0.2);
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  body {
-    height: auto;
-    overflow: auto;
-  }
-
-  .layout-auth {
-    flex-direction: column;
-    height: auto;
-    overflow: auto;
-  }
-
-  .lado-imagem {
-    display: none;
-  }
-
-  .lado-formulario {
-    height: auto;
-    overflow: visible;
-    padding: 40px 28px;
-    max-width: 100%;
-  }
 }
