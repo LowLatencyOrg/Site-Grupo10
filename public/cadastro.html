@@ -88,7 +88,7 @@
       var senhaVar = senha_input.value;
       var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-      if (nomeVar == "" || emailVar == "" || empresaVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || dataNascimento == "") {
+      if (nomeVar == "" || emailVar == "" || empresaVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
         cardErro.style.display = "block";
         cardErro.className = "mensagem-alerta erro";
         mensagem_erro.innerHTML = "Preencha todos os campos em branco para prosseguir!";
@@ -121,7 +121,7 @@
     }
 
     function trocaTela(){
-      window.location = "file:///C:/Users/danie/OneDrive/%C3%81rea%20de%20Trabalho/Site-Grupo10/public/manutencao.html"
+      window.location = "manutencao.html"
     }
     function sumirMensagem() {
       cardErro.style.display = "none";
