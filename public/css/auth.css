@@ -74,7 +74,7 @@ a {
   padding: 48px 64px;
   background: var(--fundo);
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
   max-width: 560px;
 }
 
@@ -176,6 +176,8 @@ a {
 .campo-senha,
 .campo-nome,
 .campo-empresa,
+.campo-cnpj,
+.campo-telefone,
 .campo-confirmar-senha, .data-nasc {
   width: 100%;
   padding: 11px 13px;
@@ -196,6 +198,8 @@ a {
 .campo-senha:focus,
 .campo-nome:focus,
 .campo-empresa:focus,
+.campo-cnpj:focus,
+.campo-telefone:focus,
 .campo-confirmar-senha:focus {
   border-color: var(--destaque);
 }
