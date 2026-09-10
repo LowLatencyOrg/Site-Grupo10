@@ -37,7 +37,7 @@
 
         <div class="grupo-campo">
           <label class="rotulo-campo">Nome completo *</label>
-          <input class="campo-nome" id="nome_input" type="text" value="Diretor de Infraestrutura"
+          <input class="campo-nome" id="nome_input" type="text" value="João da Silva"
             placeholder="Ex: Roberto Silva" required />
         </div>
 
@@ -51,6 +51,18 @@
           <label class="rotulo-campo">Empresa / Instituição *</label>
           <input class="campo-empresa" id="empresa_input" type="text" value="Instituição Financeira S/A"
             placeholder="Ex: Banco Alpha S/A" required />
+        </div>
+
+        <div class="grupo-campo">
+          <label class="rotulo-campo">CNPJ *</label>
+          <input class="campo-cnpj" id="cnpj_input" type="text" value="12.345.678/0001-90"
+            placeholder="00.000.000/0000-00" required />
+        </div>
+
+        <div class="grupo-campo">
+          <label class="rotulo-campo">Telefone *</label>
+          <input class="campo-telefone" id="telefone_input" type="tel" value="(11) 98765-4321"
+            placeholder="(00) 00000-0000" required />
         </div>
 
         <div class="grupo-campo">
@@ -84,10 +96,12 @@
       var nomeVar = nome_input.value;
       var emailVar = email_input.value;
       var empresaVar = empresa_input.value;
+      var cnpjVar = cnpj_input.value;
+      var telefoneVar = telefone_input.value;
       var senhaVar = senha_input.value;
       var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-      if (nomeVar == "" || emailVar == "" || empresaVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+      if (nomeVar == "" || emailVar == "" || empresaVar == "" || cnpjVar == "" || telefoneVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
         cardErro.style.display = "block";
         cardErro.className = "mensagem-alerta erro";
         mensagem_erro.innerHTML = "Preencha todos os campos em branco para prosseguir!";
@@ -103,7 +117,7 @@
         return false;
       }
 
-      if (emailVar == "admin@lowlatency.com.br" && senhaVar == "123456") {
+      if (emailVar == "admin@lowlatency.com.br" && senhaVar == "123456" && cnpjVar == "12.345.678/0001-90") {
         cardErro.style.display = "block";
         cardErro.className = "mensagem-alerta";
         mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando...";
