@@ -356,7 +356,7 @@ img {
 }
 
 .lista-recursos-solucao li::before {
-  content: '✓';
+  content: '•';
   color: var(--destaque);
   font-weight: 700;
   flex-shrink: 0;
