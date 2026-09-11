@@ -375,25 +375,27 @@ img {
   border-radius: 12px;
   padding: 24px;
   text-align: center;
+
 }
 
-.numero-diferencial {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--destaque);
-  margin-bottom: 8px;
-}
+
 
 .caixa-diferencial h4 {
   font-size: 17px;
   color: #fff;
   margin-bottom: 8px;
+  
 }
 
 .caixa-diferencial p {
   font-size: 13px;
   color: #94a3b8;
+}
+
+.caixa-diferencial :hover {
+  border-color: rgba(16, 185, 129, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px -5px rgba(16, 185, 129, 0.25);
 }
 
 /* Footer */
