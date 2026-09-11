@@ -375,7 +375,6 @@ img {
   border-radius: 12px;
   padding: 24px;
   text-align: center;
-
 }
 
 
@@ -392,7 +391,7 @@ img {
   color: #94a3b8;
 }
 
-.caixa-diferencial :hover {
+.grade-diferenciais :hover {
   border-color: rgba(16, 185, 129, 0.45);
   transform: translateY(-2px);
   box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px -5px rgba(16, 185, 129, 0.25);
